@@ -23,10 +23,10 @@ const app = express();
 app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use(express.json());
 app.use(cookieParser());
-// app.use(cors({
-//   credentials: true,
-//   origin: "https://merchat-api-j2lm.vercel.app/",
-// }));
+app.use(cors({
+  credentials: true,
+  origin: "https://merchat-api-j2lm.vercel.app/",
+}));
 
 async function getUserDataFromRequest(req) {
   return new Promise((resolve, reject) => {
