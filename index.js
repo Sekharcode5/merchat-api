@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   credentials: true,
-  origin: process.env.CLIENT_URL,
+  origin: "https://merchat-api-j2lm.vercel.app/",
 }));
 
 async function getUserDataFromRequest(req) {
